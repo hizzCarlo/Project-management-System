@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <link rel="stylesheet" href="file.css">
+    <title>Simple File Manager</title>
+</head>
+<header>
+    <div class="logo">
+        <div class="logo-text">Profile</div>
+    </div>
+    <button onclick="goBack()" style="margin-right: 2rem;"><i class="fa-solid fa-arrow-rotate-left"></i></button>
+
+<script>
+function goBack() {
+  window.location.href = "homepage-james.html"; // Redirect to homepage.html
+}
+</script>
+</header>
+<body>
+    <div class="con">
+        <input type="file" id="file-input" multiple>
+        <ul id="file-list"></ul>
+        <table id="file-table">
+            <thead>
+                <tr>
+                    <th style="border-top-left-radius: 10px; border-bottom-left-radius: 10px;">File Name</th>
+                    <th>Size (bytes)</th>
+                    <th>Type</th>
+                    <th style="border-top-right-radius: 10px; border-bottom-right-radius: 10px;">Actions</th>
+                </tr>
+            </thead>
+            <tbody id="file-table-body"></tbody>
+        </table>
+    </div> 
+
+    <script>
+        let uploadedFiles = [];
+
+        document.getElementById('file-input').addEventListener('change', handleFileSelect, false);
+
+        window.addEventListener('load', () => {
+            uploadedFiles = JSON.parse(localStorage.getItem('uploadedFiles')) || [];
+            displayFiles();
+        });
+
+        window.addEventListener('beforeunload', () => {
+            localStorage.setItem('uploadedFiles', JSON.stringify(uploadedFiles));
+        });
+
+        function handleFileSelect(event) {
+            const fileList = event.target.files;
+            const list = document.getElementById('file-list');
+            list.innerHTML = '';
+            for (let i = 0; i < fileList.length; i++) {
+                const listItem = document.createElement('li');
+                const link = document.createElement('a');
+                link.href = '#';
+                link.textContent = fileList[i].name;
+                listItem.appendChild(link);
+                list.appendChild(listItem);
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    alert(`You clicked on ${fileList[i].name}`);
+                });
+                uploadedFiles.push({
+                    name: fileList[i].name,
+                    size: fileList[i].size,
+                    type: fileList[i].type,
+                    file: fileList[i]
+                });
+            }
+            displayFiles();
+        }
+
+        function deleteFile(index) {
+            uploadedFiles.splice(index, 1);
+            displayFiles();
+        }
+
+        function viewFile(index) {
+            const file = uploadedFiles[index];
+            const jsonData = JSON.stringify(file.file, null, 2);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            window.open(url);
+            window.URL.revokeObjectURL(url);
+        }
+
+        function downloadFile(index) {
+            const file = uploadedFiles[index];
+            const jsonData = JSON.stringify(file.file);
+            const blob = new Blob([jsonData], { type: 'application/json' });
+            const url = window.URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = file.name;
+            document.body.appendChild(a);
+            a.click();
+            window.URL.revokeObjectURL(url);
+            document.body.removeChild(a);
+        }
+
+        function displayFiles() {
+            const tableBody = document.getElementById('file-table-body');
+            tableBody.innerHTML = '';
+            uploadedFiles.forEach((file, index) => {
+                const newRow = document.createElement('tr');
+                const fileNameCell = document.createElement('td');
+                fileNameCell.textContent = file.name;
+                const fileSizeCell = document.createElement('td');
+                fileSizeCell.textContent = file.size;
+                const fileTypeCell = document.createElement('td');
+                fileTypeCell.textContent = file.type;
+                const actionsCell = document.createElement('td');
+                const deleteButton = document.createElement('button');
+                deleteButton.textContent = 'Delete';
+                deleteButton.addEventListener('click', () => deleteFile(index));
+                const viewButton = document.createElement('button');
+                viewButton.textContent = 'View';
+                viewButton.addEventListener('click', () => viewFile(index));
+                const downloadButton = document.createElement('button');
+                downloadButton.textContent = 'Download';
+                downloadButton.addEventListener('click', () => downloadFile(index));
+                actionsCell.appendChild(deleteButton);
+                actionsCell.appendChild(viewButton);
+                actionsCell.appendChild(downloadButton);
+                newRow.appendChild(fileNameCell);
+                newRow.appendChild(fileSizeCell);
+                newRow.appendChild(fileTypeCell);
+                newRow.appendChild(actionsCell);
+                tableBody.appendChild(newRow);
+            });
+            document.getElementById('file-table').style.display = 'table';
+        }
+    </script>
+
+    <!-- core  -->
+    <script src="vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	  <script src="vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="js/leadmark.js"></script>
+</body>

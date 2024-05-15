@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Form</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+  <div class="wrapper">
+    <h1>Login</h1>
+    <div class="input-box">
+      <input type="text" id="username" placeholder="Username" required>
+      <i class='bx bxs-user'></i>
+    </div>
+    <div class="input-box">
+      <input type="password" id="password" placeholder="Password" required>
+      <i class='bx bxs-lock-alt'></i>
+    </div>
+    <div class="remember-forgot">
+      <label><input type="checkbox">Remember Me</label>
+    </div>
+    <button type="button" class="btn" onclick="login()">Login</button>
+  </div>
+
+  <script>
+    function login() {
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+
+      // Perform authentication
+      if (username === "admin" && password === "password") {
+        // If authentication successful, redirect to homepage
+        window.location.href = 'index2.html';
+      } else {
+        // If authentication fails, show an alert
+        alert("Invalid username or password. Please try again.");
+      }
+    }
+  </script>
+</body>
+</html>

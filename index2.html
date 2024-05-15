@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Start your development with LeadMark landing page.">
+    <meta name="author" content="Devcrud">
+    <title></title>
+    <!-- font icons -->
+    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
+    <!-- Bootstrap + LeadMark main styles -->
+	<link rel="stylesheet" href="stylesss.css">
+</head>
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+
+    <!-- page Navigation -->
+    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
+        <div class="container">
+            <a class="navbar-brand" href="https://gordoncollegeccs.edu.ph/ccs/students/gces">
+                <img src="logo.png" alt="">
+            </a>
+            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">                     
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About Us</a>
+                    </li>
+                    <!-- <li class="nav-item">
+                        <a class="nav-link" href="#partfolio">Portfolio</a>
+                    </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="ml-4 nav-link btn btn-primary btn-sm rounded">Logout</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End Of Second Navigation -->
+
+    <!-- Page Header -->
+    <header class="header">
+        <div class="overlay">
+            <h1 class="subtitle">Gordon College</h1>
+            <h1 class="title">We are the Best</h1>  
+        </div>  
+        <div class="shape">
+            <svg viewBox="0 0 1500 200">
+                <path d="m 0,240 h 1500.4828 v -71.92164 c 0,0 -286.2763,-81.79324 -743.19024,-81.79324 C 300.37862,86.28512 0,168.07836 0,168.07836 Z"/>
+            </svg>
+        </div>  
+        <div class="mouse-icon"><div class="wheel"></div></div>
+    </header>
+    <!-- End Of Page Header -->
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <h6 class="section-title mb-0">About Us</h6>
+                    <h6 class="section-subtitle mb-4">Gordon College Project</h6>
+                    <p >Welcome to the Personal Profile Project, a comprehensive and introspective journey designed to help you explore, articulate, and present your unique identity, experiences, and aspirations. This project is not merely a collection of facts about your life; it is a deep dive into understanding who you are, what drives you, and how you envision your future.</p>
+            <h6 class="section-title text-center mb-0">Developer</h6>
+            <h6 class="section-subtitle mb-5 text-center">What Our Developer Say</h6>
+            <div class="row">
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center mb-3">
+                                <img class="mr-3" src="imgs/pogi1.jpg" alt="">
+                                <div class="media-body">
+                                    <h6 class="mt-1 mb-0">Romar Longos</h6>
+                                    <small class="text-muted mb-0">Web Designer</small>     
+                                </div>
+                            </div>
+                            <p class="mb-0">I am Romar longos im the web designer of this project</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center mb-3">
+                                <img class="mr-3" src="imgs/pogi2.jpg" alt="">
+                                <div class="media-body">
+                                    <h6 class="mt-1 mb-0">Hizola John Carlo</h6>
+                                    <small class="text-muted mb-0">Project Manager</small>        
+                                </div>
+                            </div>
+                            <p class="mb-0">I am John Carlo Hizola im the Projectmanager/leader of this project</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 my-3 my-md-0">
+                    <div class="card">
+                        <div class="card-body">
+                            <div class="media align-items-center mb-3">
+                                <img class="mr-3" src="imgs/pogi3.jpg" alt="">
+                                <div class="media-body">
+                                    <h6 class="mt-1 mb-0">James Truimfante</h6>
+                                    <small class="text-muted mb-0">Web Developer/Planner</small>        
+                                </div>
+                            </div>
+                            <p class="mb-0">I am James Lee M. Triumfante im a webdesigner helper</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>             
+        </div>
+    </section>
+    <!-- End OF About Section -->
+
+     <!-- Blog Section -->
+     <section class="section" id="projects">
+        <div class="container">
+            <h6 class="section-title mb-0 text-center">Projects</h6>
+            <h6 class="section-subtitle mb-5 text-center">See Available Project</h6>
+            <!-- Button to add projects -->
+            <div class="text-center mb-4">
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addProjectModal">Add New Project</button>
+            </div>
+
+            <!-- Modal for adding new project -->
+            <div class="modal fade" id="addProjectModal" tabindex="-1" role="dialog" aria-labelledby="addProjectModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="addProjectModalLabel">Add New Project</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="projectName">Project Title</label>
+                                    <input type="text" class="form-control" id="projectName" placeholder="Enter project title">
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectDescription">Project Description</label>
+                                    <textarea class="form-control" id="projectDescription" rows="3" placeholder="Enter project description"></textarea>
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectOwnerName">Name</label>
+                                    <input type="text" class="form-control" id="projectOwnerName" placeholder="Your name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectOwnerEmail">Email</label>
+                                    <input type="email" class="form-control" id="projectOwnerEmail" placeholder="Your email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="projectOwnerNumber">Phone Number</label>
+                                    <input type="text" class="form-control" id="projectOwnerNumber" placeholder="Your phone number">
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save Project</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="imgs/pogi1.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Longos, Romar</h6>
+                            <p>A BSCS 2nd year Student From Gordon college</p>
+                            <a href="homepage-romar.html" style=" font-size: small; color: orange;">Go To The Projects</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="imgs/pogi2.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title"> Hizola, John Carlo</h5>
+                            <p>A BSCS 2nd year Student From Gordon college</p>
+                            <a href="homepage-jc.html" style=" font-size: small; color: orange;">Go To The Projects</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src="imgs/pogi3.jpg" alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title">Triumfante, James Lee</h6>
+                            <p>A BSCS 2nd year Student From Gordon college</p>
+                            <a href="homepage-james.html" style=" font-size: small; color: orange;">Go To Projects</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+
+    <!-- Testmonial Section -->
+    <section class="section" id="testmonial">
+        
+    </section>
+    <!-- End of Testmonial Section -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="section has-img-bg pb-0">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-5 my-3">
+                    <h6 class="mb-0">Phone</h6>
+                    <p class="mb-4">+ 123-456-7890</p>
+
+                    <h6 class="mb-0">Address</h6>
+                    <p class="mb-4">Gordon College Olongapo City</p>
+
+                    <h6 class="mb-0">Email</h6>
+                    <p class="mb-0">Gordon College.edu.ph</p>
+                    <p></p>
+                </div>
+                <div class="col-md-7">
+                    <form>
+                        <h4 class="mb-4">Drop Us A Line</h4>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="name" placeholder="Name">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="email" class="form-control text-white rounded-0 bg-transparent" name="Email" placeholder="Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control text-white rounded-0 bg-transparent" name="subject" placeholder="Subject">
+                            </div>
+                            <div class="form-group col-12">
+                                <textarea name="message" id="" cols="30" rows="4" class="form-control text-white rounded-0 bg-transparent" placeholder="Message"></textarea>
+
+                            </div>
+                            <div class="form-group col-12 mb-0">
+                                <button type="submit" class="btn btn-primary rounded w-md mt-3">Send</button>
+                            </div>                          
+                        </div>                          
+                    </form>
+                </div>
+            </div>
+            <!-- Page Footer -->
+            <footer class="mt-5 py-4 border-top border-secondary">
+                <p class="mb-0 small">&copy; <script>document.write(new Date().getFullYear())</script>, Portfolio Created By <a href="https://gordoncollegeccs.edu.ph/ccs/students/gces" target="_blank">Human Computer Interaction</a>  All rights reserved.</p>     
+            </footer>
+            <!-- End of Page Footer -->  
+        </div>
+    </section>
+	
+	<!-- core  -->
+    <script src="vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="js/leadmark.js"></script>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const saveProjectBtn = document.querySelector('#addProjectModal .btn-primary');
+        const projectNameInput = document.getElementById('projectName');
+        const projectDescriptionInput = document.getElementById('projectDescription');
+        const projectOwnerNameInput = document.getElementById('projectOwnerName');
+        const projectOwnerEmailInput = document.getElementById('projectOwnerEmail');
+        const projectOwnerNumberInput = document.getElementById('projectOwnerNumber');
+        const projectsContainer = document.querySelector('#projects .row');
+
+        // Function to load projects from localStorage
+        function loadProjects() {
+            const projects = JSON.parse(localStorage.getItem('projects')) || [];
+            projects.forEach(project => {
+                const card = createProjectCard(project);
+                projectsContainer.appendChild(card);
+            });
+        }
+
+        // Function to create a project card
+        function createProjectCard(project) {
+            const card = document.createElement('div');
+            card.className = 'col-md-4';
+            card.innerHTML = `
+                <div class="card border-0 mb-4">
+                    <img src="imgs/no-pic.jpg" alt="" class="card-img-top w-100">
+                    <div class="card-body">
+                        <h6 class="card-title">${project.title}</h6>
+                        <p>${project.description}</p>
+                        <a href="project-details.html?title=${encodeURIComponent(project.title)}&desc=${encodeURIComponent(project.description)}&owner=${encodeURIComponent(project.owner)}&email=${encodeURIComponent(project.email)}&phone=${encodeURIComponent(project.phone)}" style="font-size: small; color: orange;">Go To Projects</a>
+                    </div>
+                </div>
+            `;
+            return card;
+        }
+
+        // Event listener for the Save Project button
+        saveProjectBtn.addEventListener('click', function() {
+            if (projectNameInput.value && projectDescriptionInput.value && projectOwnerNameInput.value && projectOwnerEmailInput.value && projectOwnerNumberInput.value) {
+                const newProject = {
+                    title: projectNameInput.value,
+                    description: projectDescriptionInput.value,
+                    owner: projectOwnerNameInput.value,
+                    email: projectOwnerEmailInput.value,
+                    phone: projectOwnerNumberInput.value
+                };
+
+                // Save to localStorage
+                const projects = JSON.parse(localStorage.getItem('projects')) || [];
+                projects.push(newProject);
+                localStorage.setItem('projects', JSON.stringify(projects));
+
+                // Create and append the new project card
+                const card = createProjectCard(newProject);
+                projectsContainer.appendChild(card);
+
+                // Optionally, clear the input fields
+                projectNameInput.value = '';
+                projectDescriptionInput.value = '';
+                projectOwnerNameInput.value = '';
+                projectOwnerEmailInput.value = '';
+                projectOwnerNumberInput.value = '';
+
+                // Close the modal if needed
+                $('#addProjectModal').modal('hide');
+            } else {
+                alert('Please fill all the fields.');
+            }
+        });
+    });
+    </script>
+
+</body>
+</html>

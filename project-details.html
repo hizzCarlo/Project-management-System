@@ -1,0 +1,87 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+    <title>Project Details</title>
+</head>
+<header>
+    <div class="logo">
+        <div style="margin-left: 2rem; font-size: xx-large;font-weight: bold; color: orange;">Project Details</div>
+    </div>
+    <button id="logoutBtn" style="margin-right: 2rem;"><i class="fa-solid fa-door-open"></i></button>
+    <script>
+        // Add event listener to the logout button
+        document.getElementById("logoutBtn").addEventListener("click", function() {
+          // Redirect to the login page
+          window.location.href = "index2.html";
+        });
+      </script>
+</header>
+<body>
+    <div class="hero-header">
+       <div class="wrapper">
+           <div class="container">
+                <div class="des">
+                    <div class="hero-pic">
+                    <img src="imgs/no-pic.jpg" alt="profile pic">
+
+                    </div>
+                    <div class="info" style="padding: 2rem;">
+                        <h3 id="projectOwner"><i class="fa-solid fa-address-book"></i> </h3>
+                        <h3 id="ownerEmail"><i class="fas fa-envelope"></i></h3>
+                        <h3 id="ownerPhone"><i class="fa-solid fa-phone"></i></h3>
+                        
+                    </div>
+                </div>
+                <hr class="vertical-line">
+                <div class="dis">
+                    <div class="hero-text">
+                        <h5 id="projectOwner1"><i class="fa-solid fa-user"></i> Owner</h5>
+                        <h1 id="projectTitle"><i class="fa-solid fa-project-diagram"></i> Project Title</h1>
+                        <p id="projectDescription">Project Description</p>
+
+                        <div class="btn-group">
+                            <a href="index-reuse.html" class="btn active">Projects</a>
+                        </div>
+
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const title = urlParams.get('title');
+            const desc = urlParams.get('desc');
+            const owner = urlParams.get('owner');
+            const email = urlParams.get('email');
+            const phone = urlParams.get('phone');
+
+            document.getElementById('projectTitle').textContent = decodeURIComponent(title);
+            document.getElementById('projectDescription').textContent = decodeURIComponent(desc);
+            document.getElementById('projectOwner').textContent = decodeURIComponent(owner);
+            document.getElementById('projectOwner1').textContent = decodeURIComponent(owner);
+            document.getElementById('ownerEmail').textContent =  decodeURIComponent(email);
+            document.getElementById('ownerPhone').textContent =  decodeURIComponent(phone);
+        };
+    </script>
+</body>
+</html>
+

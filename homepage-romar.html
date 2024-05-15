@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+</head>
+<header>
+    <div class="logo">
+        <div style="margin-left: 2rem; font-size: xx-large;font-weight: bold; color: orange;">Profile</div>
+    </div>
+    <button id="logoutBtn" style="margin-right: 2rem;"><i class="fa-solid fa-door-open"></i></button>
+
+    <script>
+      // Add event listener to the logout button
+      document.getElementById("logoutBtn").addEventListener("click", function() {
+        // Redirect to the login page
+        window.location.href = "index2.html";
+      });
+    </script>
+</header>
+<body>
+    <div class="hero-header">
+       <div class="wrapper">
+           <div class="container">
+                <div class="des">
+                    <div class="hero-pic">
+                    <img src="imgs/pogi1.jpg" alt="profile pic">
+
+                    </div>
+                    <div class="info" style="padding: 2rem;">
+                    <h3><i class="fa-solid fa-address-book"></i>Romar Longos</h3>
+                    <h3><i class="fas fa-envelope"></i> 202210009@gordoncollege</h3>
+                    <h3><i class="fa-solid fa-phone"></i>09464641105</h3>
+                    </div>
+                </div>
+                <hr class="vertical-line">
+                <div class="dis">
+                    <div class="hero-text">
+                        <h5>Hi I'm <span class="input">Romar Longos</span></h5>
+                        <h1>Gordon College</h1>
+                        <p> this is my personal profile project this is where i can put my project file
+                        </p>
+
+                        <div class="btn-group">
+                            <a href="index-romar.html" class="btn active">Projects</a>
+                        </div>
+
+                        <div class="social">
+                            <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            
+                        </div>
+                    </div>
+                </div>
+           </div>
+       </div>
+    </div>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.10/typed.min.js"></script>
+    <script>
+       var togglebtn=document.querySelector(".togglebtn");
+       var nav=document.querySelector(".navlinks");
+       var links=document.querySelector(".navlinks li");
+
+       togglebtn.addEventListener("click", function(){
+           this.classList.toggle("click");
+           nav.classList.toggle("open");
+       })
+
+       var typed=new Typed(".input",{
+           strings:["Frontend Developer","UX Designer","Web Developer"],
+           typedSpeed:70,
+           backSpeed:55,
+           loop:true
+       })
+    </script>
+
+    <!-- core  -->
+    <script src="vendors/jquery/jquery-3.4.1.js"></script>
+    <script src="vendors/bootstrap/bootstrap.bundle.js"></script>
+
+    <!-- bootstrap 3 affix -->
+	<script src="vendors/bootstrap/bootstrap.affix.js"></script>
+
+    <!-- Isotope -->
+    <script src="vendors/isotope/isotope.pkgd.js"></script>
+
+    <!-- LeadMark js -->
+    <script src="js/leadmark.js"></script>
+</body>
+</html>

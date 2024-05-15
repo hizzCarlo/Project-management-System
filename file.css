@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #ff6e42;
+    color: #ffffff;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to right, #ff6e42, #ffbe3d);
+}
+
+.logo-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+button {
+    /* background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    color: #000000; */
+    margin-left: .3rem;
+    color: black; /* Text color */
+            background-color: #f8f9fa; /* Light grey background */
+            border: 1px solid #ccc; /* Grey border */
+            padding: 5px 10px; /* Padding around the text */
+            border-radius: 5px; /* Rounded corners */
+            cursor: pointer; /* Pointer cursor on hover */
+            transition: background-color 0.3s; /* Smooth transition for background color */
+}
+
+.con {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px;
+}
+
+#file-input {
+    display: block;
+    margin-bottom: 20px;
+    border: 2px solid #ced4da;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#file-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#file-list li a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+#file-list li a:hover {
+    text-decoration: underline;
+}
+
+#file-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#file-table th, #file-table td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+}
+
+#file-table th {
+    background: linear-gradient(to right, #ff6e42, #ffbe3d);
+    color: #ffffff;
+}
+
+#file-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+button.action-btn {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 5px;
+    transition: background-color 0.3s;
+}
+
+button.action-btn:hover {
+    background-color: #0056b3;
+}
+
